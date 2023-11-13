@@ -78,7 +78,7 @@ const observer = new MutationObserver(mutations => {
       mutation.addedNodes.forEach((node: any) => {
         if (node.nodeType !== Node.ELEMENT_NODE) return;
         
-        const tweetButton = node.querySelector(buttonSelector);
+        const tweetButton = document.querySelector<HTMLElement>(buttonSelector);
         if (tweetButton) { foundTweetButtonHandler(tweetButton); }
         
         const attachmentsImages = document.querySelectorAll(attachmentsImageSelector);
